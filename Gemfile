@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -72,4 +73,22 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+gem "solidus_auth_devise"
+
+gem "solidus_core", ">= 0"
+gem "solidus_backend", ">= 0"
+gem "solidus_api", ">= 0"
+gem "solidus_sample", ">= 0"
+gem "canonical-rails"
+gem "solidus_support"
+gem "truncate_html"
+gem "view_component", "~> 2.46"
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "apparition", "~> 0.6.0", github: "twalpole/apparition"
+  gem "rails-controller-testing", "~> 1.0.5"
+  gem "rspec-activemodel-mocks", "~> 1.1.0"
+  gem "solidus_dev_support", "~> 2.5"
 end
